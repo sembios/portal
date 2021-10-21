@@ -1,0 +1,116 @@
+.list {
+    border-collapse: collapse;
+    margin: auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    max-width: 800px;
+    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.list thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.list th,
+.list td {
+    padding: 12px 15px;
+}
+
+.list tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.list tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.list tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.btn {
+    border: none;
+    color: white;
+    padding: 5px 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background-color: #008cba
+}
+
+.btn-delete {
+    background-color: #f44336;
+} 
+
+.btn-view {
+    background-color: #e7e7e7;
+    color: black;
+}
+
+.Searchlist {
+    border-collapse: collapse;
+    margin: 10px auto;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    max-width: 800px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.searchNav {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.numberSearch {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+.numberSearch input {
+    width: 50% !important;
+    font-size: 18px;
+}
+
+.clear {
+    height: 26px;
+    position: absolute;
+    margin: 20px;
+    margin-left: 160px;
+  }
+
+  @media all and (min-width: 790px) {
+    .list {
+      width: 90%;
+    }
+    .Searchlist {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 80%;
+    }
+  }
+
+  @media all and (max-width: 480px) {
+    .list p {
+       display: none;
+    }
+    .Searchlist {
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        width: 60%;
+    }
+  }
