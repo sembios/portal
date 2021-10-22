@@ -13,7 +13,7 @@ export default function Home() {
     useEffect (() => {
         async function myData () {
             try {
-                fireDb.child("profile").on("value", (snapshot) => {
+                await fireDb.child("profile").on("value", (snapshot) => {
                     if(snapshot.val() !== null) {
                         setData({...snapshot.val()});
                     } else {
@@ -43,24 +43,32 @@ export default function Home() {
         }
     }
 
-    const Search = () => {
+    const Search = async () => {
         {
-            fireDb.child("profile").orderByChild("lastName").equalTo(searchVal).on("value", function(snapshot) {
+            await fireDb.child("profile").orderByChild("lastName").equalTo(searchVal).on("value", function(snapshot) {
                 if (snapshot.exists()) {
                     setSearchData({...snapshot.val()});
                      console.log("exists");
                      console.log(searchData);
                 }else{
                     setSearchData({});
-                    toast.error("Не найдено")
+                    toast.error("Не найдено", {
+                        position: "top-center",
+                        autoClose: 2000,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                        progress: undefined,
+                        });
                   }
                 });
         }
     }
 
-    const SearchPhone = () => {
+    const SearchPhone = async () => {
         {
-            fireDb.child("profile").orderByChild("contactPhone").equalTo(searchNum).on("value", function(snapshot) {
+            await fireDb.child("profile").orderByChild("contactPhone").equalTo(searchNum).on("value", function(snapshot) {
                 if (snapshot.exists()) {
                     setSearchData({...snapshot.val()});
                      console.log("exists");

@@ -11,6 +11,7 @@
 
 input[type="text"],
 input[type="date"],
+input[type="email"],
 select {
     width: 100%;
     padding: 12px 20px;

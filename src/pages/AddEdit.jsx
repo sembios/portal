@@ -54,7 +54,15 @@ export default function AddEdit() {
                     if (err) {
                         toast.error(err);
                     } else {
-                        toast.success("Профиль создан")
+                        toast.success("Профиль создан", {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            });
                     }
                 });
             } else {
@@ -62,7 +70,15 @@ export default function AddEdit() {
                     if (err) {
                         toast.error(err);
                     } else {
-                        toast.success("Профиль обновлен")
+                        toast.success("Профиль обновлен", {
+                            position: "top-center",
+                            autoClose: 2000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            });
                     }
                 });
             }
@@ -90,7 +106,7 @@ export default function AddEdit() {
                 <label htmlFor="typeDoc">Тип документа</label>
                 <select type="text" name="typeDoc" id="typeDoc" value={typeDoc} onChange={(e)=>handleInputChange(e)}>
                                         <option value="">-</option>
-                                        <option value="Паспорт">Паспорт (ID Card)</option>
+                                        <option value="Паспорт (ID Card)">Паспорт (ID Card)</option>
                                         <option value="Загран. паспорт">Загран. паспорт</option>
                                         <option value="Водительское удостоверение">Водительское удостоверение</option>
                                         </select>
@@ -144,7 +160,6 @@ export default function AddEdit() {
                 
                 <label htmlFor="idenCheck">Идентифицирован</label>
                 <select type="text" name="idenCheck" id="idenCheck" value={idenCheck} onChange={(e)=>handleInputChange(e)}>
-                                        <option value="">-</option>
                                         <option value="">Нет</option>
                                         <option value={true}>Да</option>
                                         </select>

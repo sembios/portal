@@ -7,7 +7,7 @@ import style from './View.module.scss'
 export default function View() {
     const [user, setUser] = useState({});
 
-    const {id, onSearch} = useParams();
+    const {id} = useParams();
 
     const history = useHistory();
 
